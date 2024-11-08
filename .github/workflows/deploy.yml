@@ -11,10 +11,13 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2.3.1
 
+      - name: Install pnpm
+        run: npm install -g pnpm  # 安裝 pnpm
+        
       - name: Install and Build
         run: |
-          npm install
-          npm run build-storybook
+          pnpm install
+          pnpm run build-storybook
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@3.6.2
