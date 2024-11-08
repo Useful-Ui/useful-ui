@@ -1,0 +1,30 @@
+name: Deploy Storybook
+
+on:
+  push:
+    branches:
+      - main  # 指定在 main 分支推送時觸發部署
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2  # 檢出最新的專案代碼
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '18'  # 設定您需要的 Node.js 版本
+
+      - name: Install dependencies
+        run: npm install  # 安裝專案所需的依賴
+
+      - name: Build Storybook
+        run: npm run build-storybook  # 執行 build-storybook 指令以生成 Storybook
+
+      - name: Deploy Storybook to GitHub Pages
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # 使用 GitHub 提供的自動部署權杖
+        run: npm run deploy-storybook  # 執行 deploy-storybook 指令以部署 Storybook
