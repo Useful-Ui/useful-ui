@@ -12,6 +12,6 @@ jobs:
         # This needs an Acces Token stored as "GH_TOKEN" 👇
         run: |
           npm install
-          npm run deploy-storybook -- --ci
+          npm run deploy-storybook
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
