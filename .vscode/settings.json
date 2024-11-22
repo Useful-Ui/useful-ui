@@ -1,0 +1,22 @@
+{
+    "workbench.colorCustomizations": {
+        "[Default Dark+]": {
+            "editor.background": "#c5bebe",
+            "editor.foreground": "#d4d4d4",
+            "activityBar.background": "#6b6b6d",
+            "activityBar.foreground": "#d4d4d4"
+        },
+        "[Monokai]": {
+            "editor.background": "#dde2c4",
+            "editor.foreground": "#f8f8f2",
+            "activityBar.background": "#8d917a",
+            "activityBar.foreground": "#f8f8f2"
+        },
+        "editor.lineHighlightBackground": "#1073cf2d",
+        "editor.lineHighlightBorder": "#9fced11f",
+        "terminal.background": "#00000000",
+        "activityBar.background": "#152C5A",
+        "titleBar.activeBackground": "#1E3D7E",
+        "titleBar.activeForeground": "#FAFBFE"
+    }
+}
